@@ -11,7 +11,6 @@ class MainComponent(
     componentContext: ComponentContext,
     storeFactory: StoreFactory,
     private val output: (Output) -> Unit
-
 ): ComponentContext by componentContext {
     private val mainStore = instanceKeeper.getStore {
         MainStoreFactory(

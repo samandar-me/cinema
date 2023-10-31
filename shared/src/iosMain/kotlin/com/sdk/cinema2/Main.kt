@@ -17,10 +17,7 @@ import com.sdk.cinema2.ui.root.RootComponent
 import com.sdk.cinema2.ui.root.RootContent
 import platform.UIKit.UIViewController
 
-fun MainViewController(
-    topSafeArea: Float,
-    bottomSafeArea: Float
-): UIViewController {
+fun MainViewController(): UIViewController {
     val rootComponent = RootComponent(
         componentContext = DefaultComponentContext(
             LifecycleRegistry()
@@ -28,19 +25,12 @@ fun MainViewController(
         storeFactory = DefaultStoreFactory()
     )
     return ComposeUIViewController {
-        val density = LocalDensity.current
 
-        val topSafeAreaDp = with(density) { topSafeArea.toDp() }
-        val bottomSafeAreaDp = with(density) { bottomSafeArea.toDp() }
-        val safeArea = PaddingValues(top = topSafeAreaDp + 25.dp, bottom = bottomSafeAreaDp)
-
-        CompositionLocalProvider(LocalSafeArea provides safeArea) {
-            Surface(
-                modifier = Modifier.fillMaxSize(),
-                color = Color.Black
-            ) {
-                RootContent(rootComponent)
-            }
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = Color.Black
+        ) {
+            RootContent(rootComponent)
         }
     }
 }

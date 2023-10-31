@@ -2,6 +2,9 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     id("org.jetbrains.compose")
+    id("kotlin-parcelize")
+    kotlin("plugin.serialization") version "1.6.21"
+    id("kotlinx-serialization")
 }
 
 android {
@@ -44,4 +47,8 @@ dependencies {
     implementation(libs.compose.ui)
     implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
+
+    implementation("org.kodein.di:kodein-di:7.20.2")
+    implementation("org.kodein.di:kodein-di-framework-android-core:7.20.2")
+    implementation("org.kodein.di:kodein-di-framework-android-x:7.5.1")
 }

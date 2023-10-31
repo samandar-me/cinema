@@ -3,8 +3,8 @@ plugins {
     alias(libs.plugins.kotlinCocoapods)
     alias(libs.plugins.androidLibrary)
     id("org.jetbrains.compose")
-    kotlin("plugin.serialization") version "1.8.21"
     id("kotlin-parcelize")
+    kotlin("plugin.serialization") version "1.6.21"
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
@@ -18,11 +18,10 @@ kotlin {
             }
         }
     }
+
     iosX64()
     iosArm64()
     iosSimulatorArm64()
-
-    val decomposeVersion = "2.0.0"
 
     cocoapods {
         summary = "Some description for the Shared Module"
@@ -66,6 +65,9 @@ kotlin {
                 api("io.github.qdsfdhvh:image-loader:1.6.8")
 
                 implementation("io.github.xxfast:decompose-router:0.5.0")
+
+                implementation("org.kodein.di:kodein-di:7.20.2")
+                implementation("org.kodein.di:kodein-di-framework-compose:7.20.2")
             }
         }
 //        val commonTest by getting {
@@ -78,6 +80,8 @@ kotlin {
                 implementation(libs.appcompat)
                 implementation(libs.activity.compose)
                 implementation(libs.ktor.client.cio)
+
+                implementation("com.google.android.exoplayer:exoplayer:2.15.0")
             }
         }
         val iosX64Main by getting

@@ -6,4 +6,5 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform).apply(false)
     alias(libs.plugins.kotlinCocoapods).apply(false)
     alias(libs.plugins.composeMultiplatform) apply false
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.6.21"
 }

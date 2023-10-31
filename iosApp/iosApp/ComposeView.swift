@@ -10,20 +10,9 @@ import shared
 import SwiftUI
 
 struct ComposeView: UIViewControllerRepresentable {
-    
-    private let topSafeArea: Float
-    private let bottomSafeArea: Float
-    
-    init(topSafeArea: Float, bottomSafeArea: Float) {
-        self.topSafeArea = topSafeArea
-        self.bottomSafeArea = bottomSafeArea
-    }
  
     func makeUIViewController(context: Context) -> some UIViewController {
-        return MainKt.MainViewController(
-            topSafeArea: topSafeArea,
-            bottomSafeArea: bottomSafeArea
-        )
+        return MainKt.MainViewController()
     }
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
