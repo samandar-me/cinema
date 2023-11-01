@@ -10,7 +10,7 @@ import io.ktor.client.request.parameter
 import io.ktor.http.path
 import io.ktor.http.takeFrom
 
-const val API_KEY = "10b5f11775d915de02e73630cccd9f1d" // 8c2bbadabd465e81466586449631be0f 10b5f11775d915de02e73630cccd9f1d
+const val API_KEY = "8c2bbadabd465e81466586449631be0f" // 8c2bbadabd465e81466586449631be0f 10b5f11775d915de02e73630cccd9f1d
 const val BASE_URL = "https://api.themoviedb.org/"
 
 internal class NetworkService(

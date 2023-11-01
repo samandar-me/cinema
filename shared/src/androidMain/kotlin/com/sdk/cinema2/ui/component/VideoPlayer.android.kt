@@ -2,6 +2,7 @@ package com.sdk.cinema2.ui.component
 
 import android.app.Activity
 import android.content.Context
+import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.view.ViewGroup
 import android.widget.FrameLayout

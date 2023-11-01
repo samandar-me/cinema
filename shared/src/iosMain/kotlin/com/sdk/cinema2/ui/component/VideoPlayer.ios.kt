@@ -64,11 +64,6 @@ actual fun VideoPlayer(
 
     playerLayer.player = player
 
-    LaunchedEffect(Unit) {
-        delay(2000L)
-        //isLoading = false
-    }
-
     Box(
         modifier = Modifier.padding(top = 38.dp)
     ) {

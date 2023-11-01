@@ -21,7 +21,7 @@ fun CompanyItem(company: Company) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         NetworkImage(
-            url = company.logo ?: "5zCBSB5xMDKcDqe91qahCOUYVV.jpg",
+            url = company.logo ?: "kuUIHNwMec4dwOLghDhhZJzHZTd.png",
             modifier = Modifier.size(140.dp)
         )
         Spacer(Modifier.height(4.dp))

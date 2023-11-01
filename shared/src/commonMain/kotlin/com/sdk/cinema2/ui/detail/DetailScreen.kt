@@ -31,6 +31,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.sdk.cinema2.core.DEFAULT_VIDEO
 import com.sdk.cinema2.ui.component.BoxShader
 import com.sdk.cinema2.ui.component.DetailShimmer
 import com.sdk.cinema2.ui.component.VideoPlayer
@@ -51,7 +52,7 @@ fun DetailScreen(component: DetailComponent) {
                 ) {
                     VideoPlayer(
                         modifier = Modifier.height(330.dp),
-                        url = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+                        url = DEFAULT_VIDEO,
                         onBack = {
                             component.onOutput(DetailComponent.Output.NavigateBack)
                         }

@@ -25,12 +25,12 @@ fun MainViewController(): UIViewController {
         storeFactory = DefaultStoreFactory()
     )
     return ComposeUIViewController {
-
-        Surface(
-            modifier = Modifier.fillMaxSize(),
-            color = Color.Black
-        ) {
-            RootContent(rootComponent)
-        }
+        RootContent(rootComponent)
+//        Surface(
+//            modifier = Modifier.fillMaxSize(),
+//            color = Color.Black
+//        ) {
+//
+//        }
     }
 }
